@@ -1,0 +1,60 @@
+[submodule "remote-apis"]
+	path = remote-apis
+	url = https://github.com/bazelbuild/remote-apis.git
+[submodule "proposals"]
+	path = proposals
+	url = https://github.com/bazelbuild/proposals.git
+[submodule "buildbox-integration"]
+	path = buildbox-integration
+	url = https://gitlab.com/BuildGrid/buildbox/buildbox-integration.git
+[submodule "buildbox-fuse"]
+	path = buildbox-fuse
+	url = https://gitlab.com/BuildGrid/buildbox/buildbox-fuse.git
+[submodule "buildbox-common"]
+	path = buildbox-common
+	url = https://gitlab.com/BuildGrid/buildbox/buildbox-common.git
+[submodule "buildbox-tools"]
+	path = buildbox-tools
+	url = https://gitlab.com/BuildGrid/buildbox/buildbox-tools.git
+[submodule "buildbox-casd"]
+	path = buildbox-casd
+	url = https://gitlab.com/BuildGrid/buildbox/buildbox-casd.git
+[submodule "buildbox-run-bubblewrap"]
+	path = buildbox-run-bubblewrap
+	url = https://gitlab.com/BuildGrid/buildbox/buildbox-run-bubblewrap.git
+[submodule "buildbox-e2e"]
+	path = buildbox-e2e
+	url = https://gitlab.com/BuildGrid/buildbox/buildbox-e2e.git
+[submodule "buildbox-run-hosttools"]
+	path = buildbox-run-hosttools
+	url = https://gitlab.com/BuildGrid/buildbox/buildbox-run-hosttools.git
+[submodule "buildbox-worker"]
+	path = buildbox-worker
+	url = https://gitlab.com/BuildGrid/buildbox/buildbox-worker.git
+[submodule "buildbox-run-userchroot"]
+	path = buildbox-run-userchroot
+	url = https://gitlab.com/BuildGrid/buildbox/buildbox-run-userchroot.git
+[submodule "buildstream"]
+	path = buildstream
+	url = https://gitlab.com/BuildStream/buildstream.git
+[submodule "buildgrid"]
+	path = buildgrid
+	url = https://gitlab.com/BuildGrid/buildgrid.git
+[submodule "recc"]
+	path = recc
+	url = https://gitlab.com/bloomberg/recc.git
+[submodule "bb-remote-execution"]
+	path = bb-remote-execution
+	url = https://github.com/buildbarn/bb-remote-execution.git
+[submodule "bb-deployments"]
+	path = bb-deployments
+	url = https://github.com/buildbarn/bb-deployments.git
+[submodule "bb-storage"]
+	path = bb-storage
+	url = https://github.com/buildbarn/bb-storage.git
+[submodule "bb-browser"]
+	path = bb-browser
+	url = https://github.com/buildbarn/bb-browser.git
+[submodule "bb-event-service"]
+	path = bb-event-service
+	url = https://github.com/buildbarn/bb-event-service.git
