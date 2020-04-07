@@ -20,12 +20,12 @@ mkdir -p ${VENVDIR}
 
 # buildbox-*
 for SRC in \
-   buildbox-common \
-   buildbox-casd \
-   buildbox-worker \
-   buildbox-run-bubblewrap \
-   buildbox-run-hosttools \
-   buildbox-run-userchroot
+    buildbox-common \
+    buildbox-casd \
+    buildbox-worker \
+    buildbox-run-bubblewrap \
+    buildbox-run-hosttools \
+    buildbox-run-userchroot
 do
     mkdir -p ${BUILDDIR}/${SRC} \
     && cd ${BUILDDIR}/${SRC} \
@@ -35,7 +35,18 @@ done
 
 # BuildStream
 virtualenv ${VENVDIR}/buildstream
-${VENVDIR}/buildstream/bin/pip3 install --editable ${BASEDIR}/buildstream
+${VENVDIR}/buildstream/bin/pip3 install -r ${BASEDIR}/buildstream/requirements/dev-requirements.txt
+for SRC in \
+    buildstream \
+    bst-external \
+    bst-plugins-container \
+    bst-plugins-experimental
+do
+    ${VENVDIR}/buildstream/bin/pip3 install --editable ${BASEDIR}/${SRC}
+done
+
+# Simplify PATH
+ln -sf ${DESTDIR}${PREFIX}/bin/* ${VENVDIR}/buildstream/bin/
 
 # update and fetch submodules?
 ls -la

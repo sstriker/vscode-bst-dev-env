@@ -43,18 +43,12 @@
 [submodule "recc"]
 	path = recc
 	url = https://gitlab.com/bloomberg/recc.git
-[submodule "bb-remote-execution"]
-	path = bb-remote-execution
-	url = https://github.com/buildbarn/bb-remote-execution.git
-[submodule "bb-deployments"]
-	path = bb-deployments
-	url = https://github.com/buildbarn/bb-deployments.git
-[submodule "bb-storage"]
-	path = bb-storage
-	url = https://github.com/buildbarn/bb-storage.git
-[submodule "bb-browser"]
-	path = bb-browser
-	url = https://github.com/buildbarn/bb-browser.git
-[submodule "bb-event-service"]
-	path = bb-event-service
-	url = https://github.com/buildbarn/bb-event-service.git
+[submodule "bst-external"]
+	path = bst-external
+	url = https://gitlab.com/BuildStream/bst-external.git
+[submodule "bst-plugins-experimental"]
+	path = bst-plugins-experimental
+	url = https://gitlab.com/BuildStream/bst-plugins-experimental.git
+[submodule "bst-plugins-container"]
+	path = bst-plugins-container
+	url = https://gitlab.com/BuildStream/bst-plugins-container.git
