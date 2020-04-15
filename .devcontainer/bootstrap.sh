@@ -10,15 +10,15 @@ BUILDDIR=${HOME}/build
 VENVDIR=${HOME}/venv
 PREFIX=/usr/local
 
-export BUILDBOX_COMMON_SOURCE_ROOT=${BASEDIR}/buildbox-common
-CMAKE_OPTS="-DBuildboxCommon_DIR=${DESTDIR}${PREFIX}/lib/cmake/BuildboxCommon/ -DBUILD_TESTING=OFF"
-
 # 
 mkdir -p ${DESTDIR}
 mkdir -p ${BUILDDIR}
 mkdir -p ${VENVDIR}
 
 # buildbox-*
+export BUILDBOX_COMMON_SOURCE_ROOT=${BASEDIR}/buildbox-common
+CMAKE_OPTS="-DBuildboxCommon_DIR=${DESTDIR}${PREFIX}/lib/cmake/BuildboxCommon/ -DBUILD_TESTING=OFF"
+
 for SRC in \
     buildbox-common \
     buildbox-casd \
@@ -38,9 +38,8 @@ virtualenv ${VENVDIR}/buildstream
 ${VENVDIR}/buildstream/bin/pip3 install -r ${BASEDIR}/buildstream/requirements/dev-requirements.txt
 for SRC in \
     buildstream \
-    bst-external \
-    bst-plugins-container \
-    bst-plugins-experimental
+    bst-plugins-experimental \
+    bst-plugins-container
 do
     ${VENVDIR}/buildstream/bin/pip3 install --editable ${BASEDIR}/${SRC}
 done
@@ -48,5 +47,3 @@ done
 # Simplify PATH
 ln -sf ${DESTDIR}${PREFIX}/bin/* ${VENVDIR}/buildstream/bin/
 
-# update and fetch submodules?
-ls -la
